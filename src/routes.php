@@ -12,6 +12,7 @@ $app->get('/play', function($request, $response, $args) {
    return $this->renderer->render($response, 'play.phtml', $args);
 })->setName('play');
 
+
 $app->any('/doEvent', function($request, $response, $args)  use ($app){
     $throttler = $this->get('throttler');
     if (isset($_POST['blocking'])) {
